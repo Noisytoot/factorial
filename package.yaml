@@ -1,0 +1,40 @@
+name:                factorial
+version:             1.0.0
+github:              "noisytoot/factorial"
+license:             GPL-3.0-or-later
+author:              "noisytoot"
+maintainer:          "noisytoot"
+copyright:           "2019 noisytoot"
+
+extra-source-files:
+  - README.org
+
+description:         Please see the README on GitHub at <https://github.com/noisytoot/factorial#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  factorial:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - factorial
+
+tests:
+  factorial-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - factorial

@@ -1,0 +1,20 @@
+* factorial
+** Usage
+- factorial :: Displays a help message
+- factorial <number> :: Shows the factorial of <number>
+- factorial version :: Shows the version number
+** Installation
+Install
+#+BEGIN_SRC shell
+cd ~
+git clone https://github.com/noisytoot/factorial
+stack build
+stack install
+#+END_SRC
+Update
+#+BEGIN_SRC shell
+cd ~/factorial
+git pull
+stack build
+stack install
+#+END_SRC
