@@ -11,9 +11,10 @@ command [] = do
   name <- getProgName
   putStr $ unlines [name ++ " <number> -- Factorial using product",
                     name ++ " recursive <number> -- Factorial using recursion",
+                    name ++ " foldr <number> -- Factorial using foldr",
                     name ++ " version -- Get version number"]
 command ["version"] =
-  putStrLn "factorial v1.0.1"
+  putStrLn "factorial v1.0.2"
 command [arg] =
   if read arg < 0 then
     error "Number must be positive"
@@ -26,3 +27,9 @@ command ["recursive", arg] =
   else
     let number = read arg :: Natural in
       print $ recursiveFactorial number
+command ["foldr", arg] =
+  if read arg < 0 then
+    error "Number must be positive"
+  else
+    let number = read arg :: Natural in
+      print $ foldrFactorial number

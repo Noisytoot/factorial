@@ -3,6 +3,7 @@
 - factorial :: Displays a help message
 - factorial <number> :: Shows the factorial of <number>, using product
 - factorial recursive <number> :: Shows the factorial of <number>, using recursion
+- factorial foldr <number> :: Shows the factorial of <number>, using foldr
 - factorial version :: Shows the version number
 ** Installation
 Install
